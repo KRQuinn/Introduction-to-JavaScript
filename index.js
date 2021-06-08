@@ -18,6 +18,13 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 19;
+
+if(votingAge > 18){
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 
 /*
@@ -31,6 +38,13 @@ Do the following:
    HINT: no function required
 */
 
+let thingOne = 2;
+let thingTwo = 4;
+
+if (thingOne < thingTwo){
+  thingOne = thingOne * thingTwo;
+  console.log(thingOne);
+} 
 
 
 
@@ -58,8 +72,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1, num2){
+    return num1 * num2;
   }
 
 
@@ -74,8 +88,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -127,7 +141,7 @@ function hungryDog(weight, age){
     }
   }
 
-  console.log('task 3')
+  console.log('task 3', hungryDog(15, 1));
 
 
 
@@ -169,8 +183,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371;
   }
 
 
@@ -183,8 +197,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
 
@@ -199,10 +213,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
 
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
+    }
+  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -218,10 +234,20 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score <= 100 && score >= 90){
+    return "you got an A";
+  }else if(score <= 89 && score >= 80){
+    return "you got a B";
+  }else if(score <= 79 && score >= 70){
+    return "you got a C";
+  }else if(score <= 69 && score >= 60){
+    return "you got a D";
+  }else {
+    return "you got an F";
   }
+}
+
   
   
 
