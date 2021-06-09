@@ -166,8 +166,37 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+const computer = Math.random()
+
 function game(user, computer){
-    /*add your code here*/
+  
+    if(computer <= .33){
+        var compChoice = 'Rock';
+      }else if(computer <= .66){
+        var compChoice = 'Scissors';
+      }else {
+        var compChoice = 'Paper';
+      }
+    if(user === "Rock" && compChoice === "Scissor"){
+        return "you win!";
+      }else if(user === "Rock" && compChoice === "Paper"){
+        return "you lose!"
+      }else if(user === "Rock" && compChoice === "Rock"){
+        return "it's a tie"
+      }else if(user === "Paper" && compChoice === "Rock"){
+        return "you win!";
+      }else if(user === "Paper" && compChoice === "Scissor"){
+        return "you lose!"
+      }else if(user === "Paper" && compChoice === "Paper"){
+        return "it's a tie"
+      }else if(user === "Scissor" && compChoice === "Paper"){
+        return "you win!";
+      }else if(user === "Scissor" && compChoice === "Rock"){
+        return "you lose!"
+      }else if(user === "Scissor" && compChoice === "Scissor"){
+        return "it's a tie"
+    }
+      console.log(game('rock', computer));
 }
   
   
