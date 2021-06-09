@@ -169,17 +169,17 @@ Use the game function below to do the following:
 let computer = Math.random()
 
 function game(user, computer){
-  let computer = Math.random()
+  let throwHands;
     if(computer <= .33){
-        let computer = "Rock";
+        throwHands = "Rock";
       }else if(computer <= .66){
-        let computer = "Scissors";
+        throwHands = "Scissors";
       }else{
-        let computer = "Paper";
+        throwHands = "Paper";
       }
-    if(user === "Rock" && computer === "Scissor" || user === "Paper" && computer === "Rock" || user === "Scissor" && computer === "Paper"){
+    if(user === "Rock" && throwHands === "Scissor" || user === "Paper" && throwHands === "Rock" || user === "Scissor" && throwHands === "Paper"){
         return "you win!";
-      }else if(user === "Rock" && computer === "Rock" || user === "Paper" && computer === "Paper" || user === "Scissors" && computer === "Scissors"){
+      }else if(user === "Rock" && throwHands === "Rock" || user === "Paper" && throwHands === "Paper" || user === "Scissors" && throwHands === "Scissors"){
         return "it's a tie"
       }else {
         return "you lose!"
