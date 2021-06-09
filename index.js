@@ -168,21 +168,24 @@ Use the game function below to do the following:
 
 let computer = Math.random()
 
+if(computer <= .34){
+  computer = "rock";
+}else if(computer <= .67){
+  computer = "scissors";
+}else if (computer > .67){
+  computer = "paper";
+}
 function game(user, computer){
-  let throwHands;
-    if(computer <= .33){
-        throwHands = "Rock";
-      }else if(computer <= .66){
-        throwHands = "Scissors";
-      }else{
-        throwHands = "Paper";
-      }
-    if(user === "Rock" && throwHands === "Scissor" || user === "Paper" && throwHands === "Rock" || user === "Scissor" && throwHands === "Paper"){
+    if(user === "rock" && computer === "scissors"){
         return "you win!";
-      }else if(user === "Rock" && throwHands === "Rock" || user === "Paper" && throwHands === "Paper" || user === "Scissors" && throwHands === "Scissors"){
-        return "it's a tie"
-      }else {
-        return "you lose!"
+      }else if(user === "scissors" && computer === "paper"){
+        return "you win!";
+      }else if(user === "paper" && computer === "rock"){
+        return "you win!";
+      }else if(user === computer){
+        return "it's a tie";
+      }else{
+        return "you lose!";
       }
 
 }
